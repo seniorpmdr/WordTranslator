@@ -23,6 +23,7 @@ final class SearchViewCell: UITableViewCell, Configurable {
         previewImageView.kf.indicatorType = .activity
         if let previewImageUrl = data.previewImageUrl {
             previewImageView.kf.setImage(with: previewImageUrl)
+            previewImageView.layer.cornerRadius = 10
         }
     }
 }

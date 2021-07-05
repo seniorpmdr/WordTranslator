@@ -13,6 +13,7 @@ final class MeaningDetailViewController: UIViewController {
     // MARK: - Constants
     
     private enum Constants {
+        static let imageViewCornerRadius: CGFloat = 10
         static let meaningDetailText = NSLocalizedString("meaning_detail_text", comment: .empty)
         static let meaningDetailTranslation = NSLocalizedString("meaning_detail_translation", comment: .empty)
     }
@@ -26,7 +27,12 @@ final class MeaningDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        configureUI()
         output?.meaningDetailViewDidLoad()
+    }
+    
+    private func configureUI() {
+        imageView.layer.cornerRadius = imageViewCornerRadius
     }
 }
 
