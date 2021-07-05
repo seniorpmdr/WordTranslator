@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct SearchWordTranslationRequest: Encodable {
+struct SearchWordTranslationRequest: Encodable, QueryItemsConvertable {
     /// Searching text.
     let search: String
     
@@ -16,4 +16,8 @@ struct SearchWordTranslationRequest: Encodable {
     
     /// Page size of search.
     var pageSize: Int?
+    
+    var queryItems: [URLQueryItem]? {
+        [.init(name: "search", value: search)]
+    }
 }

@@ -13,20 +13,26 @@ protocol SearchWordTranslationServiceProtocol {
     func searchWord(using request: SearchWordTranslationRequest) -> Observable<[WordResponse]>
 }
 
-final class SearchWordTranslationService: SearchWordTranslationServiceProtocol {
+final class SearchWordTranslationService: BaseNetworkService, SearchWordTranslationServiceProtocol {
+    
     func searchWord(using request: SearchWordTranslationRequest) -> Observable<[WordResponse]> {
-        #warning("TODO change")
-        var components = URLComponents(string: "https://dictionary.skyeng.ru/api/public/v1/words/search")!
+        let baseUrl = urlProvider.getBaseUrl()?
+            .appendingPathComponent("words")
+            .appendingPathComponent("search")
         
-        let data = try! JSONEncoder().encode(request)
-        let dict = try! JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String: Any]
-        components.queryItems = dict?.map { keyValue in
-            URLQueryItem(name: keyValue.key, value: keyValue.value as? String)
+        guard let baseUrl = baseUrl,
+              var urlComponents = URLComponents(url: baseUrl, resolvingAgainstBaseURL: false) else {
+            return Observable.error(BuildRequestError())
         }
         
-        let r = URLRequest(url: components.url!)
-        return URLSession.shared.rx.data(request: r).map { data in
-            try! JSONDecoder().decode([WordResponse].self, from: data)
-        }.observe(on: MainScheduler.asyncInstance)
+        urlComponents.queryItems = request.queryItems
+        
+        let urlRequest = URLRequest(url: urlComponents.url!)
+        return URLSession
+            .shared
+            .rx
+            .data(request: urlRequest)
+            .decode(type: [WordResponse].self, decoder: JSONDecoder())
+            .observe(on: MainScheduler.asyncInstance)
     }
 }

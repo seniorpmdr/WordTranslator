@@ -10,5 +10,5 @@ import Foundation
 struct WordResponse: Decodable {
     let id: Int
     let text: String
-    let meanings: [MeaningResponse]
+    let meanings: [MeaningShortResponse]
 }

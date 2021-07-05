@@ -1,0 +1,11 @@
+//
+//  Release.xcconfig
+//  WordTranslator
+//
+//  Created by Vadim Salmin on 04.07.2021.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+BASE_URL = dictionary.skyeng.ru/api/public/v1

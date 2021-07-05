@@ -1,0 +1,9 @@
+/* 
+  Localization.strings
+  WordTranslator
+
+  Created by Vadim Salmin on 05.07.2021.
+  
+*/
+
+"meaning_detail_text" = "Text: %@";
