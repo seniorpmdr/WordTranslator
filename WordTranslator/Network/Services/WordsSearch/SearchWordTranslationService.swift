@@ -28,11 +28,6 @@ final class SearchWordTranslationService: BaseNetworkService, SearchWordTranslat
         urlComponents.queryItems = request.queryItems
         
         let urlRequest = URLRequest(url: urlComponents.url!)
-        return URLSession
-            .shared
-            .rx
-            .data(request: urlRequest)
-            .decode(type: [WordResponse].self, decoder: JSONDecoder())
-            .observe(on: MainScheduler.asyncInstance)
+        return jsonModel(type: [WordResponse].self, request: urlRequest)
     }
 }

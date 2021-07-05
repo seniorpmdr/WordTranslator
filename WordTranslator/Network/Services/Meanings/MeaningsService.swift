@@ -25,14 +25,6 @@ final class MeaningsService: BaseNetworkService, MeaningsServiceProtocol {
         urlComponents.queryItems = request.queryItems
         
         let urlRequest = URLRequest(url: urlComponents.url!)
-        return URLSession
-            .shared
-            .rx
-            .data(request: urlRequest)
-            .map({ data in
-                try! JSONDecoder().decode([MeaningResponse].self, from: data)
-            })
-//            .decode(type: [MeaningResponse].self, decoder: JSONDecoder())
-            .observe(on: MainScheduler.asyncInstance)
+        return jsonModel(type: [MeaningResponse].self, request: urlRequest)
     }
 }
