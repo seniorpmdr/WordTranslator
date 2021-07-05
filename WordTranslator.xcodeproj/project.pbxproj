@@ -11,7 +11,7 @@
 		15849523268E3E21009BA507 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15849522268E3E21009BA507 /* SceneDelegate.swift */; };
 		1584952A268E3E23009BA507 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15849529268E3E23009BA507 /* Assets.xcassets */; };
 		1584952D268E3E23009BA507 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1584952B268E3E23009BA507 /* LaunchScreen.storyboard */; };
-		15849538268E3E23009BA507 /* WordTranslatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15849537268E3E23009BA507 /* WordTranslatorTests.swift */; };
+		15849538268E3E23009BA507 /* SearchViewDataMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15849537268E3E23009BA507 /* SearchViewDataMapperTests.swift */; };
 		15849543268E3E23009BA507 /* WordTranslatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15849542268E3E23009BA507 /* WordTranslatorUITests.swift */; };
 		15849553268E3E9C009BA507 /* MeaningShortResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15849552268E3E9C009BA507 /* MeaningShortResponse.swift */; };
 		15849555268E40D5009BA507 /* SearchWordTranslationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15849554268E40D5009BA507 /* SearchWordTranslationRequest.swift */; };
@@ -93,7 +93,7 @@
 		15849529268E3E23009BA507 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1584952E268E3E23009BA507 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15849533268E3E23009BA507 /* WordTranslatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WordTranslatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		15849537268E3E23009BA507 /* WordTranslatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordTranslatorTests.swift; sourceTree = "<group>"; };
+		15849537268E3E23009BA507 /* SearchViewDataMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewDataMapperTests.swift; sourceTree = "<group>"; };
 		15849539268E3E23009BA507 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1584953E268E3E23009BA507 /* WordTranslatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WordTranslatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		15849542268E3E23009BA507 /* WordTranslatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordTranslatorUITests.swift; sourceTree = "<group>"; };
@@ -224,7 +224,7 @@
 		15849536268E3E23009BA507 /* WordTranslatorTests */ = {
 			isa = PBXGroup;
 			children = (
-				15849537268E3E23009BA507 /* WordTranslatorTests.swift */,
+				15849537268E3E23009BA507 /* SearchViewDataMapperTests.swift */,
 				15849539268E3E23009BA507 /* Info.plist */,
 			);
 			path = WordTranslatorTests;
@@ -690,7 +690,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15849538268E3E23009BA507 /* WordTranslatorTests.swift in Sources */,
+				15849538268E3E23009BA507 /* SearchViewDataMapperTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
